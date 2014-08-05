@@ -14,7 +14,7 @@
 
         <meta name="author" content="blessu" />
         <meta name="keywords" content="web" />
-        <meta name="description" content="按：这是之前挂在WordPress站上的日志。现已加入Github Pages + Pelican。不过还是整理一下，当作纪念吧。 一年来趁着闲的时候偶尔搞了搞网站。但反反复复总会疏漏一些细节。现在小归纳一下，以供参考。 域名和主机之获取 loz4目前是在Namecheap注册的域名，Hawkhost的一年吊丝主机，用得还算顺畅。Namecheap比较推荐，基本逢节假日会有1刀的优惠，不过需要信用卡或paypal。Hawkhost，根据其logo俗称老鹰主机，基本也算比较适合新手上路的价格。 具体的注册购买方法网上已经有很多介绍，之后有时间再写。注意一般先有了域名然后去注册主机，否则之后还需要重新发信更改默认域名（primary domain）。 域名和主机之在一起 主要依靠的是DNS。这里推荐使用国产DNSPOD。 1. 在Namecheap里进入域名管理，点击左侧&#34;General&#34;下的&#34;Domain Name Server Setup&#34;，选择&#34;Specify Custom DNS Servers ( Your ..." />
+        <meta name="description" content="按：这是之前挂在WordPress站上的日志。现已加入Github Pages + Pelican。不过还是整理一下，当作纪念吧。 一年来趁着闲的时候偶尔搞了搞网站。但反反复复总会疏漏一些细节。现在小归纳一下，以供参考。 域名和主机之获取 logoz4目前是在Namecheap注册的域名，Hawkhost的一年吊丝主机，用得还算顺畅。Namecheap比较推荐，基本逢节假日会有1刀的优惠，不过需要信用卡或paypal。Hawkhost，根据其logo俗称老鹰主机，基本也算比较适合新手上路的价格。 具体的注册购买方法网上已经有很多介绍，之后有时间再写。注意一般先有了域名然后去注册主机，否则之后还需要重新发信更改默认域名（primary domain）。 域名和主机之在一起 主要依靠的是DNS。这里推荐使用国产DNSPOD。 1. 在Namecheap里进入域名管理，点击左侧&#34;General&#34;下的&#34;Domain Name Server Setup&#34;，选择&#34;Specify Custom DNS Servers ( Your ..." />
 
 
 
@@ -88,15 +88,15 @@ loz4            </a>
                 </div>
                 <p><strong>按：这是之前挂在WordPress站上的日志。现已加入Github Pages + Pelican。不过还是整理一下，当作纪念吧。</strong></p>
 <p>一年来趁着闲的时候偶尔搞了搞网站。但反反复复总会疏漏一些细节。现在小归纳一下，以供参考。</p>
-<h2>域名和主机之获取</h2>
-<p>loz4目前是在<a href="http://namecheap.com">Namecheap</a>注册的域名，<a href="http://www.hawkhost.com">Hawkhost</a>的一年吊丝主机，用得还算顺畅。<a href="http://namecheap.com">Namecheap</a>比较推荐，基本逢节假日会有1刀的优惠，不过需要信用卡或paypal。<a href="http://www.hawkhost.com">Hawkhost</a>，根据其logo俗称老鹰主机，基本也算比较适合新手上路的价格。  </p>
+<h4>域名和主机之获取</h4>
+<p>logoz4目前是在<a href="http://namecheap.com">Namecheap</a>注册的域名，<a href="http://www.hawkhost.com">Hawkhost</a>的一年吊丝主机，用得还算顺畅。<a href="http://namecheap.com">Namecheap</a>比较推荐，基本逢节假日会有1刀的优惠，不过需要信用卡或paypal。<a href="http://www.hawkhost.com">Hawkhost</a>，根据其logo俗称老鹰主机，基本也算比较适合新手上路的价格。  </p>
 <p>具体的注册购买方法网上已经有很多介绍，之后有时间再写。注意一般先有了域名然后去注册主机，否则之后还需要重新发信更改默认域名（primary domain）。 </p>
-<h2>域名和主机之在一起</h2>
+<h4>域名和主机之在一起</h4>
 <p>主要依靠的是DNS。这里推荐使用国产<a href="http://www.dnspod.cn">DNSPOD</a>。<br />
 1. 在Namecheap里进入域名管理，点击左侧<code>"General"</code>下的<code>"Domain Name Server Setup"</code>，选择<code>"Specify Custom DNS Servers ( Your own DNS Servers )"</code>, 加入<code>f1g1ns1.dnspod.net</code>和<code>f1g1ns2.dnspod.net</code>。<br />
 2. 确保<a href="http://www.hawkhost.com">Hawkhost</a>的默认域名，找到购买时发的带有ip地址的邮件。记下ip <br />
 3. 去<a href="http://www.dnspod.cn">DNSPOD</a>添加域名，保留两条指向<code>f1g1ns1.dnspod.net</code>和<code>f1g1ns2.dnspod.net</code>的NS记录（好像也删不掉）。然后再加两个A记录，分别指向@和www，记录值是<a href="http://www.hawkhost.com">Hawkhost</a>提供的ip。此间可能会有一阵子异常，毕竟DNS更新需要时间，但一般半天到一天后无论访问<a href="http://www.loz4.com">http://www.loz4.com</a>还是<a href="http://loz4.com">http://loz4.com</a>都应该顺畅无压力了。等待DNS更新也别闲着，可以直接上WordPress了。</p>
-<h2>WordPress和cPanel</h2>
+<h4>WordPress和cPanel</h4>
 <p><a href="http://www.hawkhost.com">Hawkhost</a>以及大部分主机商都基于傻瓜型的cPanel控制面板，所以图文教程可以参考 <a href="http://hugege.com/2009/03/16/cpanel-wordpress-china/comment-page-1/">胡戈戈的中文cPanel安装wordpress教程</a>。</p>
             </div>
             <!-- /.entry-content -->
