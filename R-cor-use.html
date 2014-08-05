@@ -1,42 +1,92 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh"
+>
 <head>
-        <meta charset="utf-8" />
-        <title>[R] cor的use参数</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>[R] cor的use参数 - loz4</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+<link rel="canonical" href="/R-cor-use.html">
+
+        <meta name="author" content="blessu" />
+        <meta name="keywords" content="R" />
+        <meta name="description" content="通常用cor计算PCC的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些NA，那么处理起来就会比较麻烦，甚至影响最终的结果。 R (R version 3.0.2 (2013-09-25) -- &#34;Frisbee Sailing&#34;) 里面的介绍见下 If ‘use’ is ‘&#34;everything&#34;’, ‘NA’s will propagate conceptually, i.e., a resulting value will be ‘NA’ whenever one of its contributing observations is ‘NA’. If ‘use’ is ‘&#34;all.obs&#34;’, then the presence of ..." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">loz4 </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/R-cor-use.html" rel="bookmark"
-           title="Permalink to [R] cor的use参数">[R] cor的use参数</a></h1>
-    </header>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+loz4            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/category/misc.html">Misc</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
 
-    <div class="entry-content">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/R-cor-use.html"
+                       rel="bookmark"
+                       title="Permalink to [R] cor的use参数">
+                        [R] cor的use参数
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
 <footer class="post-info">
-        <abbr class="published" title="2014-08-04T20:44:00">
-                Published: Mon 04 August 2014
-        </abbr>
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-01-26T20:44:00"> Sun 26 January 2014</time>
+    </span>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/blessu.html">blessu</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>. </p>
-<p>tags: <a href="/tag/r.html">R</a> </p>
-</footer><!-- /.post-info -->      <p>通常用cor计算PCC的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些NA，那么处理起来就会比较麻烦，甚至影响最终的结果。</p>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/r.html">R</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>通常用cor计算PCC的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些NA，那么处理起来就会比较麻烦，甚至影响最终的结果。</p>
 <p>R (R version 3.0.2 (2013-09-25) -- "Frisbee Sailing") 里面的介绍见下</p>
 <blockquote>
 <p>If ‘use’ is ‘<code>"everything"</code>’, ‘NA’s will propagate conceptually, i.e., a resulting value will be ‘NA’ whenever one of its contributing observations is ‘NA’.<br />
@@ -60,17 +110,17 @@ Note that (the equivalent of) ‘var(double(0), use = *)’ gives ‘NA’ for �
 <span class="p">[</span><span class="mi">3</span><span class="p">,]</span> <span class="mf">0.36454235</span> <span class="mf">0.1724477</span> <span class="mf">0.2983889</span>
 <span class="p">[</span><span class="mi">4</span><span class="p">,]</span> <span class="mf">0.14480942</span> <span class="mf">0.6861022</span> <span class="mf">0.7692226</span>
 <span class="p">[</span><span class="mi">5</span><span class="p">,]</span> <span class="mf">0.88729339</span> <span class="mf">0.7440398</span> <span class="mf">0.5458178</span>
-<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="err">&#39;</span><span class="n">complete</span><span class="p">.</span><span class="n">obs</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="s">&quot;complete.obs&quot;</span><span class="p">)</span>
 <span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
 <span class="n">V1</span> <span class="mf">1.0000000</span> <span class="mf">0.3179911</span> <span class="o">-</span><span class="mf">0.2597317</span>
 <span class="n">V2</span> <span class="mf">0.3179911</span> <span class="mf">1.0000000</span> <span class="mf">0.8329635</span>
 <span class="n">V3</span> <span class="o">-</span><span class="mf">0.2597317</span> <span class="mf">0.8329635</span> <span class="mf">1.0000000</span>
-<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="err">&#39;</span><span class="n">pairwise</span><span class="p">.</span><span class="n">complete</span><span class="p">.</span><span class="n">obs</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="s">&quot;pairwise.complete.obs&quot;</span><span class="p">)</span>
 <span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
 <span class="n">V1</span> <span class="mf">1.0000000</span> <span class="o">-</span><span class="mf">0.1523021</span> <span class="o">-</span><span class="mf">0.2597317</span>
 <span class="n">V2</span> <span class="o">-</span><span class="mf">0.1523021</span> <span class="mf">1.0000000</span> <span class="mf">0.8329635</span>
 <span class="n">V3</span> <span class="o">-</span><span class="mf">0.2597317</span> <span class="mf">0.8329635</span> <span class="mf">1.0000000</span>
-<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">,],</span><span class="n">use</span><span class="o">=</span><span class="err">&#39;</span><span class="n">complete</span><span class="p">.</span><span class="n">obs</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">,],</span><span class="n">use</span><span class="o">=</span><span class="s">&quot;complete.obs&quot;</span><span class="p">)</span>
 <span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
 <span class="n">V1</span> <span class="mf">1.0000000</span> <span class="mf">0.3179911</span> <span class="o">-</span><span class="mf">0.2597317</span>
 <span class="n">V2</span> <span class="mf">0.3179911</span> <span class="mf">1.0000000</span> <span class="mf">0.8329635</span>
@@ -79,35 +129,86 @@ Note that (the equivalent of) ‘var(double(0), use = *)’ gives ‘NA’ for �
 
 
 <p>尽管前两列都是满值，<code>"complete.obs"</code>时由于第三列有两个NA，计算前两列的相关系数的时候也受到影响。所以实践上如果要充分利用有的信息，还是尽量使用<code>"pairwise.complete.obs"</code>。</p>
-    </div><!-- /.entry-content -->
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://picb.ac.cn/">PICB</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
 
-                            <li><a href="https://github.com/blessu/">Github</a></li>
-                            <li><a href="#">2beMore</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="https://github.com/blessu/"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+                    <li class="list-group-item"><a href="https://bitbucket.org/blessu/"><i class="fa fa-bitbucket-square fa-lg"></i> Bitbucket</a></li>
+                    <li class="list-group-item"><a href="http://www.linkedin.com/profile/view?id=41819089"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+                  </ul>
+                </li>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+
+                <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group " id="tags">
+                        <li class="list-group-item tag-1">
+                            <a href="/tag/web.html">
+                                web
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/tag/pelican.html">
+                                pelican
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/tag/r.html">
+                                R
+                            </a>
+                        </li>
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://picb.ac.cn/" target="_blank">
+                PICB
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 blessu
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
 
 </body>
 </html>

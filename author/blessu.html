@@ -1,103 +1,70 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh"
+>
 <head>
-        <meta charset="utf-8" />
-        <title>loz4 - blessu</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>Articles by blessu - loz4</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+
+        <meta name="author" content="blessu" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="loz4" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="loz4"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="loz4"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">loz4 </a></h1>
-                <nav><ul>
-                    <li><a href="/category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+loz4            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/misc.html">Misc</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/R-cor-use.html">[R] cor的use参数</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2014-08-04T20:44:00">
-                Published: Mon 04 August 2014
-        </abbr>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/blessu.html">blessu</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>. </p>
-<p>tags: <a href="/tag/r.html">R</a> </p>
-</footer><!-- /.post-info --><p>通常用cor计算PCC的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些NA，那么处理起来就会比较麻烦，甚至影响最终的结果。</p>
-<p>R (R version 3.0.2 (2013-09-25) -- "Frisbee Sailing") 里面的介绍见下</p>
-<blockquote>
-<p>If ‘use’ is ‘<code>"everything"</code>’, ‘NA’s will propagate conceptually, i.e., a resulting value will be ‘NA’ whenever one of its contributing observations is ‘NA’.<br />
-If ‘use’ is ‘<code>"all.obs"</code>’, then the presence of missing observations will produce an error.<br />
-If ‘use’ is ‘<code>"complete.obs"</code>’ then missing values are handled by casewise deletion (and if there are no complete cases, that gives an error).<br />
-‘<code>"na.or.complete"</code>’ is the same unless there are no complete cases, that gives ‘NA’.<br />
-Finally, if ‘use’ has the value ‘<code>"pairwise.complete.obs"</code>’ then the correlation or covariance between each pair of variables is computed using all complete pairs of observations on those variables. This can result in covariance or correlation matrices which are not positive semi-definite, as well as ‘NA’ entries if there are no complete pairs for that pair of variables. For ‘cov’ and ‘var’, ‘<code>"pairwise.complete.obs"</code>’ only works with the ‘<code>"pearson"</code>’ method.<br />
-Note that (the equivalent of) ‘var(double(0), use = *)’ gives ‘NA’ for ‘<code>use = "everything"</code>’ and ‘<code>"na.or.complete"</code>’, and gives an error in the other cases.</p>
-</blockquote>
-<p>简单说，<br />
-1. <code>"everything"</code> 作为default，有NA结果就全NA，不报错；<br />
-2. <code>"all.obs"</code>:，有NA结果就全NA，有NA就报错； <br />
-3. <code>"complete.obs"</code>，计算时只考虑完整的部分，如果没有则报错；<br />
-4. <code>"na.or.complete"</code>，计算时只考虑完整的部分，如果没有不报错给NA；<br />
-5. <code>"pairwise.complete.obs"</code> ，计算时考虑配对间完整的部分，如果没有则报错。</p>
-<p>关于<code>"pairwise.complete.obs"</code> 和 <code>"complete.obs"</code> 的区别可以举个例子（改自<a href="http://stackoverflow.com/questions/18892051/complete-obs-of-cor-function">Stackflow</a>）：</p>
-<div class="highlight"><pre><span class="o">&gt;</span> <span class="n">mat</span> 
-<span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,]</span> <span class="mf">0.95553437</span> <span class="mf">0.4211649</span> <span class="n">NA</span>
-<span class="p">[</span><span class="mi">2</span><span class="p">,]</span> <span class="mf">0.06432989</span> <span class="mf">0.7404416</span> <span class="n">NA</span>
-<span class="p">[</span><span class="mi">3</span><span class="p">,]</span> <span class="mf">0.36454235</span> <span class="mf">0.1724477</span> <span class="mf">0.2983889</span>
-<span class="p">[</span><span class="mi">4</span><span class="p">,]</span> <span class="mf">0.14480942</span> <span class="mf">0.6861022</span> <span class="mf">0.7692226</span>
-<span class="p">[</span><span class="mi">5</span><span class="p">,]</span> <span class="mf">0.88729339</span> <span class="mf">0.7440398</span> <span class="mf">0.5458178</span>
-<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="err">&#39;</span><span class="n">complete</span><span class="p">.</span><span class="n">obs</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
-<span class="n">V1</span> <span class="mf">1.0000000</span> <span class="mf">0.3179911</span> <span class="o">-</span><span class="mf">0.2597317</span>
-<span class="n">V2</span> <span class="mf">0.3179911</span> <span class="mf">1.0000000</span> <span class="mf">0.8329635</span>
-<span class="n">V3</span> <span class="o">-</span><span class="mf">0.2597317</span> <span class="mf">0.8329635</span> <span class="mf">1.0000000</span>
-<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="err">&#39;</span><span class="n">pairwise</span><span class="p">.</span><span class="n">complete</span><span class="p">.</span><span class="n">obs</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
-<span class="n">V1</span> <span class="mf">1.0000000</span> <span class="o">-</span><span class="mf">0.1523021</span> <span class="o">-</span><span class="mf">0.2597317</span>
-<span class="n">V2</span> <span class="o">-</span><span class="mf">0.1523021</span> <span class="mf">1.0000000</span> <span class="mf">0.8329635</span>
-<span class="n">V3</span> <span class="o">-</span><span class="mf">0.2597317</span> <span class="mf">0.8329635</span> <span class="mf">1.0000000</span>
-<span class="o">&gt;</span> <span class="n">cor</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">,],</span><span class="n">use</span><span class="o">=</span><span class="err">&#39;</span><span class="n">complete</span><span class="p">.</span><span class="n">obs</span><span class="err">&#39;</span><span class="p">)</span>
-<span class="n">V1</span> <span class="n">V2</span> <span class="n">V3</span>
-<span class="n">V1</span> <span class="mf">1.0000000</span> <span class="mf">0.3179911</span> <span class="o">-</span><span class="mf">0.2597317</span>
-<span class="n">V2</span> <span class="mf">0.3179911</span> <span class="mf">1.0000000</span> <span class="mf">0.8329635</span>
-<span class="n">V3</span> <span class="o">-</span><span class="mf">0.2597317</span> <span class="mf">0.8329635</span> <span class="mf">1.0000000</span>
-</pre></div>
-
-
-<p>尽管前两列都是满值，<code>"complete.obs"</code>时由于第三列有两个NA，计算前两列的相关系数的时候也受到影响。所以实践上如果要充分利用有的信息，还是尽量使用<code>"pairwise.complete.obs"</code>。</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/pelican.html" rel="bookmark"
-                           title="Permalink to Pelican初体验">Pelican初体验</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-08-04T16:31:00">
-                Published: Mon 04 August 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/blessu.html">blessu</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>. </p>
-<p>tags: <a href="/tag/web.html">web</a> </p>
-</footer><!-- /.post-info -->                <p>先前也转战过WordPress（也注册了域名），是好用，但是个人业余维护起来还是略复杂，不如把时间省出来多看书搬砖陪妹子。</p>
+            <article>
+                <h2><a href="/pelican.html">Pelican初体验</a></h2>
+                <div class="summary"><p>先前也转战过WordPress（也注册了域名），是好用，但是个人业余维护起来还是略复杂，不如把时间省出来多看书搬砖陪妹子。</p>
 <p>所以最后回归了简单的Github Pages + Markdown，生成工具出于熟悉Python选择了Pelican而不是常见的Jekyll。</p>
 <p>就set up而言，看着<a href="http://blog.csdn.net/wdzxl198/article/details/17561159">Pelican + Github 搭建自己的静态博客</a>来大概不到1个小时；就使用上，对着本地而不是网页码字，简直舒畅。</p>
 <p>熟悉了应该会修改这篇，现在还是笔记和测试，便不那么规整。目前可以提供的参考资料有：</p>
@@ -107,50 +74,20 @@ Note that (the equivalent of) ‘var(double(0), use = *)’ gives ‘NA’ for �
 <li><a href="http://blog.skydark.info/programming/2012/03/23/play-with-jekyll/">Play with Jekyll</a>, 有许多可借鉴的地方。</li>
 <li><a href="http://docs.getpelican.com/en/latest/quickstart.html">Pelican Quickstart</a>, 且要翻一阵子这个文档。。。</li>
 <li><a href="http://www.dongxf.com/3_Build_Personal_Blog_With_Pelican_And_GitHub_Pages.html">用 Pelican 和 ...</a></li></ol>
-                <a class="readmore" href="/pelican.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hello-world.html" rel="bookmark"
-                           title="Permalink to Hello world of loz4">Hello world of loz4</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-08-04T16:30:00">
-                Published: Mon 04 August 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/blessu.html">blessu</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>. </p>
-<p>tags: <a href="/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info -->                <p>抬头取的是象形，码农和宅男都懂，但愿能坚持维护这个地方。</p>
-                <a class="readmore" href="/hello-world.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/wordpress-simple.html" rel="bookmark"
-                           title="Permalink to 简单WordPress建站笔记">简单WordPress建站笔记</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-01-27T17:35:00">
-                Published: Mon 27 January 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/blessu.html">blessu</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>. </p>
-<p>tags: <a href="/tag/web.html">web</a> </p>
-</footer><!-- /.post-info -->                <p><strong>按：这是之前挂在WordPress站上的日志。现已加入Github Pages + Pelican。不过还是整理一下，当作纪念吧。</strong></p>
+                    <a class="btn btn-default btn-xs" href="/pelican.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/hello-world.html">Hello world of loz4</a></h2>
+                <div class="summary"><p>抬头取的是象形，码农和宅男都懂，但愿能坚持维护这个地方。</p>
+                    <a class="btn btn-default btn-xs" href="/hello-world.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/wordpress-simple.html">简单WordPress建站笔记</a></h2>
+                <div class="summary"><p><strong>按：这是之前挂在WordPress站上的日志。现已加入Github Pages + Pelican。不过还是整理一下，当作纪念吧。</strong></p>
 <p>一年来趁着闲的时候偶尔搞了搞网站。但反反复复总会疏漏一些细节。现在小归纳一下，以供参考。</p>
 <h2>域名和主机之获取</h2>
 <p>loz4目前是在<a href="http://namecheap.com">Namecheap</a>注册的域名，<a href="http://www.hawkhost.com">Hawkhost</a>的一年吊丝主机，用得还算顺畅。<a href="http://namecheap.com">Namecheap</a>比较推荐，基本逢节假日会有1刀的优惠，不过需要信用卡或paypal。<a href="http://www.hawkhost.com">Hawkhost</a>，根据其logo俗称老鹰主机，基本也算比较适合新手上路的价格。  </p>
@@ -158,39 +95,97 @@ Note that (the equivalent of) ‘var(double(0), use = *)’ gives ‘NA’ for �
 <h2>域名和主机之在一起</h2>
 <p>主要依靠的是DNS。这里推荐使用国产<a href="http://www.dnspod.cn">DNSPOD</a>。<br />
 1. 在Namecheap里进入域名管理，点击左侧<code>"General"</code>下的<code>"Domain Name Server Setup"</code>，选择<code>"Specify Custom DNS Servers ( Your ...</code></p>
-                <a class="readmore" href="/wordpress-simple.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://picb.ac.cn/">PICB</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+                    <a class="btn btn-default btn-xs" href="/wordpress-simple.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/R-cor-use.html">[R] cor的use参数</a></h2>
+                <div class="summary"><p>通常用cor计算PCC的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些NA，那么处理起来就会比较麻烦，甚至影响最终的结果。</p>
+<p>R (R version 3.0.2 (2013-09-25) -- "Frisbee Sailing") 里面的介绍见下</p>
+<blockquote>
+<p>If ‘use’ is ‘<code>"everything"</code>’, ‘NA’s will propagate conceptually, i.e., a resulting value will be ‘NA’ whenever one of its contributing observations is ‘NA’.<br />
+If ‘use’ is ‘<code>"all.obs"</code>’, then the presence of ...</p></blockquote>
+                    <a class="btn btn-default btn-xs" href="/R-cor-use.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-                            <li><a href="https://github.com/blessu/">Github</a></li>
-                            <li><a href="#">2beMore</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="https://github.com/blessu/"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+                    <li class="list-group-item"><a href="https://bitbucket.org/blessu/"><i class="fa fa-bitbucket-square fa-lg"></i> Bitbucket</a></li>
+                    <li class="list-group-item"><a href="http://www.linkedin.com/profile/view?id=41819089"><i class="fa fa-linkedin-square fa-lg"></i> Linkedin</a></li>
+                  </ul>
+                </li>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+
+
+                <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group " id="tags">
+                        <li class="list-group-item tag-1">
+                            <a href="/tag/web.html">
+                                web
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/tag/pelican.html">
+                                pelican
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="/tag/r.html">
+                                R
+                            </a>
+                        </li>
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://picb.ac.cn/" target="_blank">
+                PICB
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 blessu
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
 
 </body>
 </html>
