@@ -131,8 +131,10 @@
 </ul>
 <h4> 下水后 </h4>
 <ul>
-<li><strong>*</strong> 日期格式？**<br />
-    如下。其中 <code>%Y 年 %m 月 %d 日 , 周 %a</code> 可以自由搭配。<div class="highlight"><pre><span class="n">TIMEZONE</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span><span class="err">&#39;</span>
+<li>
+<p><strong>*</strong> 日期格式？**<br />
+    如下。其中 <code>%Y 年 %m 月 %d 日 , 周 %a</code> 可以自由搭配。</p>
+<div class="highlight"><pre><span class="n">TIMEZONE</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Asia</span><span class="o">/</span><span class="n">Shanghai</span><span class="err">&#39;</span>
 <span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="n">u</span><span class="err">&#39;</span><span class="n">zh</span><span class="err">&#39;</span>
 <span class="n">DATE_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="err">&#39;</span><span class="n">zh</span><span class="err">&#39;</span><span class="o">:</span><span class="p">(</span><span class="err">&#39;</span><span class="n">zh_CN</span><span class="sc">&#39;,&#39;</span><span class="o">%</span><span class="n">Y</span><span class="err"> 年 </span><span class="o">%</span><span class="n">m</span><span class="err"> 月 </span><span class="o">%</span><span class="n">d</span><span class="err"> 日 </span><span class="p">,</span> <span class="err"> 周 </span><span class="o">%</span><span class="n">a</span><span class="err">&#39;</span><span class="p">),</span>
@@ -140,21 +142,21 @@
 </pre></div>
 
 
-<ul>
-<li><strong>Disqus 无法成功加载？</strong> <br />
-把配置文件中的 <code>SITEUR = “”</code> 改成自己的地址。关闭 RELATIVE_URLS。</li>
-<li><strong> 抬头 Menu 要 About，不要 Category？</strong> <br />
-About 的源文件要放在 <code>./content/pages</code> 文件夹里。<code>DISPLAY_CATEGORIES_ON_MENU = False</code> 可以关闭 Category 的显示 </li>
-<li><strong> 找不到关于 Google 站内搜索的教程？</strong><br />
-原博客挂了。可以参考这里：<a href="http://blog.lanbing.org/2013.cgi">Pelican 添加自定义搜索 </a>。<br />
-或者看 <a href="https://github.com/lizherui/lizherui.github.io">lizherui 的文件 </a>（添加 <code>search.html</code> 放置搜索输出 , 修改相应的 template、css 和配置文件）。<br />
-我的 theme 排版不同，暂时不添加这个。</li>
-<li><strong>FILES_TO_COPY 失效？</strong><br />
-已经在新版本中弃用，采用了 EXTRA_PATH_METADATA</li>
-<li><strong>make html 还是 make publish？</strong><br />
-翻了翻 Makefile。我这里它们是一样的，取决于你用的是 <code>pelicanconf.py</code> 还是 <code>publishconf.py</code>。甚至你可以自己定义一个文件作配置。岔开来说，能感觉到玩腻 <a href="http://docs.getpelican.com/en/latest/settings.html"> 配置 </a> 后，下一步就该玩 Makefile 了。</li>
-</ul>
 </li>
+<li>
+<p><strong>Disqus 无法成功加载？</strong> <br />
+    把配置文件中的 <code>SITEUR = “”</code> 改成自己的地址。关闭 RELATIVE_URLS。</p>
+</li>
+<li><strong> 抬头 Menu 要 About，不要 Category？</strong> <br />
+    About 的源文件要放在 <code>./content/pages</code> 文件夹里。<code>DISPLAY_CATEGORIES_ON_MENU = False</code> 可以关闭 Category 的显示 </li>
+<li><strong> 找不到关于 Google 站内搜索的教程？</strong><br />
+    原博客挂了。可以参考这里：<a href="http://blog.lanbing.org/2013.cgi">Pelican 添加自定义搜索 </a>。<br />
+    或者看 <a href="https://github.com/lizherui/lizherui.github.io">lizherui 的文件 </a>（添加 <code>search.html</code> 放置搜索输出 , 修改相应的 template、css 和配置文件）。<br />
+    我的 theme 排版不同，暂时不添加这个。</li>
+<li><strong>FILES_TO_COPY 失效？</strong><br />
+    已经在新版本中弃用，采用了 EXTRA_PATH_METADATA</li>
+<li><strong>make html 还是 make publish？</strong><br />
+    翻了翻 Makefile。我这里它们是一样的，取决于你用的是 <code>pelicanconf.py</code> 还是 <code>publishconf.py</code>。甚至你可以自己定义一个文件作配置。岔开来说，能感觉到玩腻 <a href="http://docs.getpelican.com/en/latest/settings.html"> 配置 </a> 后，下一步就该玩 Makefile 了。</li>
 </ul>
             </div>
             <!-- /.entry-content -->
@@ -220,13 +222,13 @@ About 的源文件要放在 <code>./content/pages</code> 文件夹里。<code>DI
                             </a>
                         </li>
                         <li class="list-group-item tag-4">
-                            <a href="http://www.loz4.com/tag/pelican">
-                                pelican
+                            <a href="http://www.loz4.com/tag/r.html">
+                                R
                             </a>
                         </li>
                         <li class="list-group-item tag-4">
-                            <a href="http://www.loz4.com/tag/r.html">
-                                R
+                            <a href="http://www.loz4.com/tag/pelican">
+                                pelican
                             </a>
                         </li>
                     </ul>
