@@ -42,7 +42,7 @@
 &lt;h4&gt; 下水后 &lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;*&lt;/strong&gt; 日期格式？**&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt; 日期格式？&lt;/strong&gt;&lt;br /&gt;
     如下。其中 &lt;code&gt;%Y 年 %m 月 %d 日 , 周 %a&lt;/code&gt; 可以自由搭配。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;TIMEZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Asia&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Shanghai&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;zh&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
