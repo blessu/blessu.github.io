@@ -1,16 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>loz4</title><link>http://www.loz4.com/</link><description></description><atom:link href="http://www.loz4.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 04 Aug 2014 16:31:00 +0800</lastBuildDate><item><title>试水Pelican</title><link>http://www.loz4.com/pelican.html</link><description>&lt;p&gt; 先前也转战过 WordPress（注册了域名），是好用，但是个人业余维护起来还是略复杂，不如把时间省出来多看书搬砖陪妹子。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>loz4</title><link>http://www.loz4.com/</link><description></description><atom:link href="http://www.loz4.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 04 Aug 2014 16:31:00 +0800</lastBuildDate><item><title>试水Pelican</title><link>http://www.loz4.com/pages/2014/08/pelican/</link><description>&lt;h2&gt; 先扯两句 &lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt; 早前也转战过 WordPress（注册了域名），是好用，但是个人业余维护起来还是复杂，不如把时间省出来，多看书码字搬砖陪妹子。&lt;/p&gt;
 &lt;p&gt; 所以最后回归了简单的 Github Pages + Markdown，生成工具出于熟悉 Python 选择了 Pelican 而不是常见的 Jekyll。&lt;/p&gt;
-&lt;p&gt; 就 set up 而言，看着 &lt;a href="http://blog.csdn.net/wdzxl198/article/details/17561159"&gt;Pelican + Github 搭建自己的静态博客 &lt;/a&gt; 来大概不到 1 个小时；就使用上，对着本地而不是网页码字，简直舒畅。&lt;/p&gt;
-&lt;p&gt; 熟悉了应该会修改这篇，现在还是笔记和测试，便不那么规整。目前可以提供的参考资料有：&lt;/p&gt;
+&lt;p&gt; 就快捷 set up 而言，不到 1 个小时（当然要想调教到合自己的胃口就因人而异了）；就使用上，对着本地而不是网页码字，简直舒畅。不如众乐乐，我也来扯扯。&lt;/p&gt;
+&lt;h2&gt; 多多搜索 &lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt; 鉴于目前只是小马过河，就专注于一些使用时遇到的细节，不弄整理一步步的流程了。新手如我，可以提供的参考资料主要有 （当然之后随着版本更新，会有更多适合你的）：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt; 这类博文必须致敬的 &lt;a href="http://www.yangzhiping.com/tech/writing-space.html"&gt; 理想的写作环境：Git+Github+Markdown+Jekyll&lt;/a&gt;。最早这么做的人一定不是他，但扫了一些经验博文，大多从 WordPress 转过来的人都看过这篇。可见 WordPress 从某种程度上的坑，以及心理科班的说服力。&lt;/li&gt;
+&lt;li&gt; 必须致敬的 &lt;a href="http://www.yangzhiping.com/tech/writing-space.html"&gt; 理想的写作环境：Git+Github+Markdown+Jekyll&lt;/a&gt;。最早这么做的人一定不是他，但扫了一些经验博文，大多从 WordPress 转过来的人都看过这篇。可见 WordPress 从某种程度上的坑，以及心理科班的说服力。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html"&gt; 一步一步打造 Geek 风格的技术博客 &lt;/a&gt;，作者分享精神极赞，把整个网站 make 前的资料尤其是 pelicanconf.py 也放出来。翻翻看能学会很多。&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html"&gt; 搭建一个免费的，无限流量的 Blog----github Pages 和 Jekyll 入门 &lt;/a&gt;，我用的不是 Jekyll, 但是这篇太亲和，以致差一点就倒向了 Jekyll。&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.skydark.info/programming/2012/03/23/play-with-jekyll/"&gt;Play with Jekyll&lt;/a&gt;, 有许多可借鉴的地方。&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/latest/quickstart.html"&gt;Pelican Quickstart&lt;/a&gt;, 且要翻一阵子这个文档。。。&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.dongxf.com/3_Build_Personal_Blog_With_Pelican_And_GitHub_Pages.html"&gt; 用 Pelican 和 GitHub Pages 搭建免费的个人博客 &lt;/a&gt;，中文 Pelican 的一个不错的总结。但是我想说。。。博主你这么快就不更新了是要做反例么！！补一句，那个 theme 并不是 bootstrap3, 而是 &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs"&gt;tuxlite_tbs&lt;/a&gt;。配色赞的很，如果驾驭不了 bootstrap3 的话说不定我也投奔它了 XD&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/latest/"&gt;Pelican 官方文档 &lt;/a&gt;, 且要翻一阵子这个。。。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dongxf.com/3_Build_Personal_Blog_With_Pelican_And_GitHub_Pages.html"&gt; 用 Pelican 和 GitHub Pages 搭建免费的个人博客 &lt;/a&gt;，中文 Pelican 的一个不错的总结。但是我想说。。。博主你这么快就不更新了是要做反例么！！补一句，那个 theme 并不是 bootstrap3, 而是 &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs"&gt;tuxlite_tbs&lt;/a&gt;。配色赞的很，上面的 &lt;a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html"&gt; 一步一步打造 Geek 风格的技术博客
+&lt;/a&gt; 用的也是这个。如果驾驭不了 bootstrap3 的话，我说不定也投奔它了 XD。&lt;/li&gt;
 &lt;li&gt; 如果熟悉英文，还可以参考 &lt;a href="http://arunrocks.com/moving-blogs-to-pelican/"&gt; 从 WP 到 Jekyll 到 Pelican 的感想 &lt;/a&gt;，&lt;a href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"&gt; 实践 &lt;/a&gt;，以及 &lt;a href="http://querbalken.net/howto-setup-comments-with-disqus-in-pelican-en.html"&gt;Disqus&lt;/a&gt;。&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Mon, 04 Aug 2014 16:31:00 +0800</pubDate><guid>tag:www.loz4.com,2014-08-04:pelican.html</guid><category>web</category></item><item><title>Hello world of loz4</title><link>http://www.loz4.com/hello-world.html</link><description>&lt;p&gt; 抬头的站名取的是象形，码农和宅男都懂，但愿能坚持维护这个地方。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Mon, 04 Aug 2014 16:30:00 +0800</pubDate><guid>tag:www.loz4.com,2014-08-04:hello-world.html</guid><category>pelican</category></item><item><title>简单WordPress建站笔记</title><link>http://www.loz4.com/wordpress-simple.html</link><description>&lt;p&gt;&lt;strong&gt; 按：这是之前挂在 WordPress 站上的日志。现已加入 Github Pages + Pelican。不过还是整理一下，当作纪念吧。&lt;/strong&gt;&lt;/p&gt;
+&lt;/ol&gt;
+&lt;h2&gt; 水有多深？&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Git 相关 &lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt; 不懂 git？&lt;/strong&gt;&lt;br /&gt;
+    没事，&lt;a href="https://try.github.io/levels/1/challenges/1"&gt;15 分钟轻松速成 &lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; 不懂 git，还懒得看英文？&lt;/strong&gt;&lt;br /&gt;
+    没事，&lt;a href="http://rogerdudler.github.io/git-guide/index.zh.html"&gt;git - 简明指南 &lt;/a&gt;；&lt;br /&gt;
+    或者再深入点。&lt;a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000"&gt;Git 教程 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; 不懂 git，还懒得看英文，看了网页还不理解？&lt;/strong&gt;&lt;br /&gt;
+    居然还能对 Pelican 这么 geeky 的存在感兴趣？那可以边用边学嘛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Markdown 相关 &lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt; 咋用？&lt;/strong&gt;&lt;br /&gt;
+&lt;a href="http://markdown.tw/"&gt; 基本语法 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; 不好用？&lt;/strong&gt;&lt;br /&gt;
+    在熟悉咋用前，一个即时生成的编辑器很重要 &lt;ul&gt;
+&lt;li&gt;Max OS 下无疑问 Mou&lt;/li&gt;
+&lt;li&gt;Win 下推荐 MarkdownPad2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt; 下水后 &lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3&gt; 日期格式？&lt;/h3&gt;
+&lt;p&gt; 如下。其中 &lt;code&gt;%Y 年 %m 月 %d 日 , 周 %a&lt;/code&gt; 可以自由搭配。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;TIMEZONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Asia&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Shanghai&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;zh&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;DATE_FORMATS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;zh&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;zh_CN&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="err"&gt; 年 &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt; 月 &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="err"&gt; 日 &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt; 周 &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Disqus 无法成功加载？&lt;/h3&gt;
+&lt;p&gt; 把配置文件中的 &lt;code&gt;SITEUR = “”&lt;/code&gt; 改成自己的地址。关闭 RELATIVE_URLS。&lt;/p&gt;
+&lt;h3&gt; 抬头 Menu 要 About，不要 Category？&lt;/h3&gt;
+&lt;p&gt;About 的源文件要放在 &lt;code&gt;./content/pages&lt;/code&gt; 文件夹里。&lt;code&gt;DISPLAY_CATEGORIES_ON_MENU = False&lt;/code&gt; 可以关闭 Category 的显示 &lt;/p&gt;
+&lt;h3&gt; 找不到关于 Google 站内搜索的教程？&lt;/h3&gt;
+&lt;p&gt; 原博客挂了。可以参考这里：&lt;a href="http://blog.lanbing.org/2013.cgi"&gt;Pelican 添加自定义搜索 &lt;/a&gt;。&lt;br /&gt;
+或者看 &lt;a href="https://github.com/lizherui/lizherui.github.io"&gt;lizherui 的文件 &lt;/a&gt;（添加 &lt;code&gt;search.html&lt;/code&gt; 放置搜索输出 , 修改相应的 template、css 和配置文件）。&lt;br /&gt;
+我的 theme 排版不同，暂时不添加这个。&lt;/p&gt;
+&lt;h3&gt;FILES_TO_COPY 失效？&lt;/h3&gt;
+&lt;p&gt; 已经在新版本中弃用，采用了 EXTRA_PATH_METADATA&lt;/p&gt;
+&lt;h3&gt;make html 还是 make publish?&lt;/h3&gt;
+&lt;p&gt; 翻了翻 Makefile。我这里它们是一样的，取决于你用的是 &lt;code&gt;pelicanconf.py&lt;/code&gt; 还是 &lt;code&gt;publishconf.py&lt;/code&gt;。甚至你可以自己定义一个文件作配置。岔开来说，能感觉到玩腻 &lt;a href="http://docs.getpelican.com/en/latest/settings.html"&gt; 配置 &lt;/a&gt; 后，下一步就该玩 Makefile 了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Mon, 04 Aug 2014 16:31:00 +0800</pubDate><guid>tag:www.loz4.com,2014-08-04:pages/2014/08/pelican/</guid><category>web</category></item><item><title>Hello world of loz4</title><link>http://www.loz4.com/pages/2014/08/hello-world/</link><description>&lt;p&gt; 抬头的站名取的是象形，码农和宅男都懂，但愿能坚持维护这个地方。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Mon, 04 Aug 2014 16:30:00 +0800</pubDate><guid>tag:www.loz4.com,2014-08-04:pages/2014/08/hello-world/</guid><category>pelican</category></item><item><title>简单WordPress建站笔记</title><link>http://www.loz4.com/pages/2014/01/wordpress-simple/</link><description>&lt;p&gt;&lt;strong&gt; 按：这是之前挂在 WordPress 站上的日志。现已加入 Github Pages + Pelican。不过还是整理一下，当作纪念吧。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt; 一年来趁着闲的时候偶尔搞了搞网站。但反反复复总会疏漏一些细节。现在小归纳一下，以供参考。&lt;/p&gt;
 &lt;h4&gt; 域名和主机之获取 &lt;/h4&gt;
 &lt;p&gt;logoz4 目前是在 &lt;a href="http://namecheap.com"&gt;Namecheap&lt;/a&gt; 注册的域名，&lt;a href="http://www.hawkhost.com"&gt;Hawkhost&lt;/a&gt; 的一年吊丝主机，用得还算顺畅。&lt;a href="http://namecheap.com"&gt;Namecheap&lt;/a&gt; 比较推荐，基本逢节假日会有 1 刀的优惠，不过需要信用卡或 paypal。&lt;a href="http://www.hawkhost.com"&gt;Hawkhost&lt;/a&gt;，根据其 logo 俗称老鹰主机，基本也算比较适合新手上路的价格。  &lt;/p&gt;
@@ -21,7 +74,7 @@
 2. 确保 &lt;a href="http://www.hawkhost.com"&gt;Hawkhost&lt;/a&gt; 的默认域名，找到购买时发的带有 ip 地址的邮件。记下 ip &lt;br /&gt;
 3. 去 &lt;a href="http://www.dnspod.cn"&gt;DNSPOD&lt;/a&gt; 添加域名，保留两条指向 &lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt; 和 &lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt; 的 NS 记录（好像也删不掉）。然后再加两个 A 记录，分别指向 @ 和 www，记录值是 &lt;a href="http://www.hawkhost.com"&gt;Hawkhost&lt;/a&gt; 提供的 ip。此间可能会有一阵子异常，毕竟 DNS 更新需要时间，但一般半天到一天后无论访问 &lt;a href="http://www.loz4.com"&gt;http://www.loz4.com&lt;/a&gt; 还是 &lt;a href="http://loz4.com"&gt;http://loz4.com&lt;/a&gt; 都应该顺畅无压力了。等待 DNS 更新也别闲着，可以直接上 WordPress 了。&lt;/p&gt;
 &lt;h4&gt;WordPress 和 cPanel&lt;/h4&gt;
-&lt;p&gt;&lt;a href="http://www.hawkhost.com"&gt;Hawkhost&lt;/a&gt; 以及大部分主机商都基于傻瓜型的 cPanel 控制面板，所以图文教程可以参考 &lt;a href="http://hugege.com/2009/03/16/cpanel-wordpress-china/comment-page-1/"&gt; 胡戈戈的中文 cPanel 安装 wordpress 教程 &lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Mon, 27 Jan 2014 17:35:00 +0800</pubDate><guid>tag:www.loz4.com,2014-01-27:wordpress-simple.html</guid><category>web</category></item><item><title>[R] cor的use参数</title><link>http://www.loz4.com/R-cor-use.html</link><description>&lt;p&gt; 通常用 cor 计算 PCC 的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些 NA，那么处理起来就会比较麻烦，甚至影响最终的结果。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.hawkhost.com"&gt;Hawkhost&lt;/a&gt; 以及大部分主机商都基于傻瓜型的 cPanel 控制面板，所以图文教程可以参考 &lt;a href="http://hugege.com/2009/03/16/cpanel-wordpress-china/comment-page-1/"&gt; 胡戈戈的中文 cPanel 安装 wordpress 教程 &lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Mon, 27 Jan 2014 17:35:00 +0800</pubDate><guid>tag:www.loz4.com,2014-01-27:pages/2014/01/wordpress-simple/</guid><category>web</category></item><item><title>[R] cor的use参数</title><link>http://www.loz4.com/pages/2014/01/R-cor-use/</link><description>&lt;p&gt; 通常用 cor 计算 PCC 的时候，如果数据都很全面，那皆大欢喜可以无视这个参数。但如果数据中散落一些 NA，那么处理起来就会比较麻烦，甚至影响最终的结果。&lt;/p&gt;
 &lt;p&gt;R (R version 3.0.2 (2013-09-25) -- "Frisbee Sailing") 里面的介绍见下 &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If ‘use’ is ‘&lt;code&gt;"everything"&lt;/code&gt;’, ‘NA’s will propagate conceptually, i.e., a resulting value will be ‘NA’ whenever one of its contributing observations is ‘NA’.&lt;br /&gt;
@@ -63,4 +116,4 @@ Note that (the equivalent of) ‘var(double(0), use = *)’ gives ‘NA’ for �
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt; 尽管前两列都是满值，&lt;code&gt;"complete.obs"&lt;/code&gt; 时由于第三列有两个 NA，计算前两列的相关系数的时候也受到影响。所以实践上如果要充分利用有的信息，还是尽量使用 &lt;code&gt;"pairwise.complete.obs"&lt;/code&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Sun, 26 Jan 2014 20:44:00 +0800</pubDate><guid>tag:www.loz4.com,2014-01-26:R-cor-use.html</guid><category>R</category></item></channel></rss>
+&lt;p&gt; 尽管前两列都是满值，&lt;code&gt;"complete.obs"&lt;/code&gt; 时由于第三列有两个 NA，计算前两列的相关系数的时候也受到影响。所以实践上如果要充分利用有的信息，还是尽量使用 &lt;code&gt;"pairwise.complete.obs"&lt;/code&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">loz4</dc:creator><pubDate>Sun, 26 Jan 2014 20:44:00 +0800</pubDate><guid>tag:www.loz4.com,2014-01-26:pages/2014/01/R-cor-use/</guid><category>R</category></item></channel></rss>
