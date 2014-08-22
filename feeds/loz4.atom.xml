@@ -2,8 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>loz4</title><link href="http://www.loz4.com/" rel="alternate"></link><link href="http://www.loz4.com/feeds/loz4.atom.xml" rel="self"></link><id>http://www.loz4.com/</id><updated>2014-08-18T21:57:00+08:00</updated><entry><title>建站加载慢，可以这么办</title><link href="http://www.loz4.com/pages/2014/08/pelican-speed-in-china" rel="alternate"></link><updated>2014-08-18T21:57:00+08:00</updated><author><name>loz4</name></author><id>tag:www.loz4.com,2014-08-18:pages/2014/08/pelican-speed-in-china</id><summary type="html">&lt;p&gt; 其实并不局限于 Pelican。至少我看到的大部分相似问题来自 WordPress。&lt;/p&gt;
 &lt;p&gt;Pelican 建好站后，就期待着这一亩三分地慢慢成长。But, 每次自己刷页面看效果时都要 20 多秒才搞定。自家的娃还能忍，别人来看估计就没这个耐心。所以抽空把这个不爽 &lt;strong&gt; 暂时 &lt;/strong&gt; 解决了。&lt;/p&gt;
 &lt;p&gt; 原因出在为了字体文件，每次进入网站都需要尝试下载托管的字体。有些主题使用的是 google 服务的 Open Sans 字体，而谷哥近来被搞得比较惨。所以在 chrome 下看 F12 就会有这样的情景：  &lt;/p&gt;
-&lt;p&gt;&lt;img src=”http://i.imgur.com/9R0D9Zq.jpg” alt=”screenshot” width=”600px” /&gt;
-&lt;img alt=" 我是不是该对能连上表示开心 " src="http://i.imgur.com/9R0D9Zq.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=" 我是不是该对能连上表示开心 " src="http://i.imgur.com/9R0D9Zq.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt; 这 20 秒就只能无奈地面对着图片和页面框架。 &lt;br /&gt;
 解决办法只能是从字体文件的获取入手。解决方法因人而异，我这里主要有三个思路：  &lt;/p&gt;
 &lt;ol&gt;
