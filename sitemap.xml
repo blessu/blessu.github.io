@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.loz4.com/index.html</loc>
-<lastmod>2014-08-18T15:07:09-00:00</lastmod>
+<lastmod>2014-08-22T22:52:35-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.loz4.com/archives.html</loc>
-<lastmod>2014-08-18T15:07:09-00:00</lastmod>
+<lastmod>2014-08-22T22:52:35-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.loz4.com/tags.html</loc>
-<lastmod>2014-08-18T15:07:09-00:00</lastmod>
+<lastmod>2014-08-22T22:52:35-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.loz4.com/categories.html</loc>
-<lastmod>2014-08-18T15:07:09-00:00</lastmod>
+<lastmod>2014-08-22T22:52:35-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.loz4.com/pages/about</loc>
-<lastmod>2014-08-18T15:07:09-00:00</lastmod>
+<lastmod>2014-08-22T22:52:35-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>http://www.loz4.com/pages/2014/08/pelican-speed-in-china</loc>
+<lastmod>2014-08-18T21:57:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -68,14 +75,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.loz4.com/category/misc</loc>
-<lastmod>2014-08-04T16:31:00-00:00</lastmod>
+<lastmod>2014-08-18T21:57:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.loz4.com/tag/web</loc>
-<lastmod>2014-08-04T16:31:00-00:00</lastmod>
+<lastmod>2014-08-18T21:57:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -89,14 +96,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.loz4.com/tag/pelican</loc>
-<lastmod>2014-08-04T16:31:00-00:00</lastmod>
+<lastmod>2014-08-18T21:57:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.loz4.com/author/loz4.html</loc>
-<lastmod>2014-08-04T16:31:00-00:00</lastmod>
+<lastmod>2014-08-18T21:57:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
