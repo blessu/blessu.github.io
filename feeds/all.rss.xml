@@ -20,8 +20,8 @@
 &lt;/li&gt;
 &lt;li&gt; 老子不用 Open Sans 了。&lt;ul&gt;
 &lt;li&gt; 方法 : 直接封印了 &lt;code&gt;@import&lt;/code&gt; 字体那部分。甚至可以考虑换个主题 XD&lt;/li&gt;
-&lt;li&gt; 优点：Open Sans 和中文没啥关系，影响不大。放哪都不影响速度。&lt;/li&gt;
-&lt;li&gt; 缺点：想了想，好像除了 “ 一般来说主题自己对应的字体还是比较搭调的 ” 外没啥可反驳的。&lt;/li&gt;
+&lt;li&gt; 优点：Open Sans 和中文没啥关系，影响不大。网站放哪都不影响速度。&lt;/li&gt;
+&lt;li&gt; 缺点：想了想，好像除了 “ 一般来说主题自己对应的字体比较搭调 ” 外没啥可反驳的。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -33,10 +33,10 @@
 &lt;p&gt;bootstrap3 主题的比较特殊的字体包括谷哥的 Open Sans 和美化 “ 图标 ” 的 font-awesome。   &lt;/p&gt;
 &lt;p&gt; 之前 &lt;strong&gt; 暂时 &lt;/strong&gt; 采取过 &lt;strong&gt; 方法二 &lt;/strong&gt;，两步完成。&lt;br /&gt;
 1. 根据 &lt;a href="http://libs.useso.com/"&gt; 某前端公共库 CDN 服务 &lt;/a&gt;，把 css 第一行的 googleapis 改成 useso；&lt;br /&gt;
-2. 把主题模板  &lt;code&gt;pelican-bootstrap3/templates/base.html&lt;/code&gt; 中 &lt;code&gt;href="{{ SITEURL }}/theme/css/font-awesome.min.css"&lt;/code&gt; 改成 &lt;code&gt;href="http://libs.useso.com/js/font-awesome/4.1.0/css/font-awesome.css"&lt;/code&gt;  &lt;/p&gt;
+2. 把主题模板 &lt;code&gt;pelican-bootstrap3/templates/base.html&lt;/code&gt; 中 &lt;code&gt;href="{{ SITEURL }}/theme/css/font-awesome.min.css"&lt;/code&gt; 改成 &lt;code&gt;href="http://libs.useso.com/js/font-awesome/4.1.0/css/font-awesome.css"&lt;/code&gt;  &lt;/p&gt;
 &lt;p&gt; 今天比较了一下效果，觉得 Open Sans-&amp;gt; 默认的英文字体还可以接受。于是采取 &lt;strong&gt; 方法三 &lt;/strong&gt;，顺便把中文字体从默认换成了微软雅黑和 STHeiti。&lt;br /&gt;
 1. 首先封印掉 css 第一行的 &lt;code&gt;@import&lt;/code&gt; 字体那部分。&lt;br /&gt;
-2. 把含有 &lt;code&gt;"Open Sans"，...，sans-serif&lt;/code&gt; 的部分换成 &lt;code&gt;STHeiti, ..., "Microsoft YaHei", 微软雅黑 ,sans-serif&lt;/code&gt;，同时调大 body 字号到 16px。&lt;br /&gt;
+2. 把含有 &lt;code&gt;"Open Sans",...,sans-serif&lt;/code&gt; 的部分换成 &lt;code&gt;STHeiti,...,"Microsoft YaHei", 微软雅黑 ,sans-serif&lt;/code&gt; ，同时调大 body 字号到 16px。&lt;br /&gt;
 3. 注意 &lt;code&gt;"Microsoft YaHei", 微软雅黑 &lt;/code&gt; 要在所有英文字体之后，默认字体之前。否则，似乎雅黑会自动把单引号转成全角，难看到爆。&lt;/p&gt;
 &lt;h3&gt; 另外 &lt;/h3&gt;
 &lt;hr /&gt;

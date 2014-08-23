@@ -110,8 +110,8 @@
 </li>
 <li> 老子不用 Open Sans 了。<ul>
 <li> 方法 : 直接封印了 <code>@import</code> 字体那部分。甚至可以考虑换个主题 XD</li>
-<li> 优点：Open Sans 和中文没啥关系，影响不大。放哪都不影响速度。</li>
-<li> 缺点：想了想，好像除了 “ 一般来说主题自己对应的字体还是比较搭调的 ” 外没啥可反驳的。</li>
+<li> 优点：Open Sans 和中文没啥关系，影响不大。网站放哪都不影响速度。</li>
+<li> 缺点：想了想，好像除了 “ 一般来说主题自己对应的字体比较搭调 ” 外没啥可反驳的。</li>
 </ul>
 </li>
 </ol>
@@ -123,10 +123,10 @@
 <p>bootstrap3 主题的比较特殊的字体包括谷哥的 Open Sans 和美化 “ 图标 ” 的 font-awesome。   </p>
 <p> 之前 <strong> 暂时 </strong> 采取过 <strong> 方法二 </strong>，两步完成。<br />
 1. 根据 <a href="http://libs.useso.com/"> 某前端公共库 CDN 服务 </a>，把 css 第一行的 googleapis 改成 useso；<br />
-2. 把主题模板  <code>pelican-bootstrap3/templates/base.html</code> 中 <code>href="{{ SITEURL }}/theme/css/font-awesome.min.css"</code> 改成 <code>href="http://libs.useso.com/js/font-awesome/4.1.0/css/font-awesome.css"</code>  </p>
+2. 把主题模板 <code>pelican-bootstrap3/templates/base.html</code> 中 <code>href="{{ SITEURL }}/theme/css/font-awesome.min.css"</code> 改成 <code>href="http://libs.useso.com/js/font-awesome/4.1.0/css/font-awesome.css"</code>  </p>
 <p> 今天比较了一下效果，觉得 Open Sans-&gt; 默认的英文字体还可以接受。于是采取 <strong> 方法三 </strong>，顺便把中文字体从默认换成了微软雅黑和 STHeiti。<br />
 1. 首先封印掉 css 第一行的 <code>@import</code> 字体那部分。<br />
-2. 把含有 <code>"Open Sans"，...，sans-serif</code> 的部分换成 <code>STHeiti, ..., "Microsoft YaHei", 微软雅黑 ,sans-serif</code>，同时调大 body 字号到 16px。<br />
+2. 把含有 <code>"Open Sans",...,sans-serif</code> 的部分换成 <code>STHeiti,...,"Microsoft YaHei", 微软雅黑 ,sans-serif</code> ，同时调大 body 字号到 16px。<br />
 3. 注意 <code>"Microsoft YaHei", 微软雅黑 </code> 要在所有英文字体之后，默认字体之前。否则，似乎雅黑会自动把单引号转成全角，难看到爆。</p>
 <h3> 另外 </h3>
 <hr />
