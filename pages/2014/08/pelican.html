@@ -21,7 +21,7 @@
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://www.loz4.com/theme/css/bootstrap.spacelab.min.css" type="text/css"/>
-    <link href="http://libs.useso.com/js/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://www.loz4.com/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="http://www.loz4.com/theme/css/pygments/monokai.css" rel="stylesheet">
     <link rel="stylesheet" href="http://www.loz4.com/theme/css/style.css" type="text/css"/>
@@ -91,9 +91,9 @@
                 </div>
                 <h3> 先扯两句 </h3>
 <hr />
-<p> 早前也转战过 WordPress（注册了域名），是好用，但是个人业余维护起来还是复杂，不如把时间省出来，多看书码字搬砖陪妹子。</p>
-<p> 所以最后回归了简单的 Github Pages + Markdown，生成工具出于熟悉 Python 选择了 Pelican 而不是常见的 Jekyll。</p>
-<p> 就快捷 set up 而言，不到 1 个小时（当然要想调教到合自己的胃口就因人而异了）；就使用上，对着本地而不是网页码字，简直舒畅。不如众乐乐，我也来扯扯。</p>
+<p> 早前也转战过 WordPress（注册了域名），是好用，但是个人业余维护起来还是复杂，不如把时间省出来，多看书码字搬砖陪妹子。 <br />
+所以最后回归了简单的 Github Pages + Markdown，生成工具出于熟悉 Python 选择了 Pelican 而不是常见的 Jekyll。 <br />
+就快捷 set up 而言，不到 1 个小时（当然要想调教到合自己的胃口就因人而异了）；就使用上，对着本地而不是网页码字，简直舒畅。不如众乐乐，我也来扯扯。</p>
 <h3> 多多搜索 </h3>
 <hr />
 <p> 鉴于目前只是小马过河，就专注于一些使用时遇到的细节，不弄整理一步步的流程了。新手如我，可以提供的参考资料主要有 （当然之后随着版本更新，会有更多适合你的）：</p>
@@ -110,20 +110,30 @@
 <hr />
 <h4>Git 相关 </h4>
 <ul>
-<li><strong> 不懂 git？</strong><br />
-    没事，<a href="https://try.github.io/levels/1/challenges/1">15 分钟轻松速成 </a>。</li>
-<li><strong> 不懂 git，还懒得看英文？</strong><br />
+<li>
+<p><strong> 不懂 git？</strong><br />
+    没事，<a href="https://try.github.io/levels/1/challenges/1">15 分钟轻松速成 </a>。</p>
+</li>
+<li>
+<p><strong> 不懂 git，还懒得看英文？</strong><br />
     没事，<a href="http://rogerdudler.github.io/git-guide/index.zh.html">git - 简明指南 </a>；<br />
-    或者再深入点。<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git 教程 </a></li>
-<li><strong> 不懂 git，还懒得看英文，看了网页还不理解？</strong><br />
-    居然还能对 Pelican 这么 geeky 的存在感兴趣？那可以边用边学嘛。</li>
+    或者再深入点。<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git 教程 </a></p>
+</li>
+<li>
+<p><strong> 不懂 git，还懒得看英文，看了网页还不理解？</strong><br />
+    居然还能对 Pelican 这么 geeky 的存在感兴趣？那可以边用边学嘛。</p>
+</li>
 </ul>
 <h4>Markdown 相关 </h4>
 <ul>
-<li><strong> 咋用？</strong><br />
-<a href="http://markdown.tw/"> 基本语法 </a></li>
-<li><strong> 不好用？</strong><br />
-    在熟悉咋用前，一个即时生成的编辑器很重要 <ul>
+<li>
+<p><strong> 咋用？</strong><br />
+<a href="http://markdown.tw/"> 基本语法 </a></p>
+</li>
+<li>
+<p><strong> 不好用？</strong><br />
+    在熟悉咋用前，一个即时生成的编辑器很重要 </p>
+<ul>
 <li>Max OS 下无疑问 Mou</li>
 <li>Win 下推荐 MarkdownPad2</li>
 </ul>
@@ -147,18 +157,28 @@
 <p><strong>Disqus 无法成功加载？</strong> <br />
     把配置文件中的 <code>SITEUR = “”</code> 改成自己的地址。关闭 RELATIVE_URLS。</p>
 </li>
-<li><strong> 抬头 Menu 要 About，不要 Category？</strong> <br />
-    About 的源文件要放在 <code>./content/pages</code> 文件夹里。<code>DISPLAY_CATEGORIES_ON_MENU = False</code> 可以关闭 Category 的显示 </li>
-<li><strong> 找不到关于 Google 站内搜索的教程？</strong><br />
+<li>
+<p><strong> 抬头 Menu 要 About，不要 Category？</strong> <br />
+    About 的源文件要放在 <code>./content/pages</code> 文件夹里。<code>DISPLAY_CATEGORIES_ON_MENU = False</code> 可以关闭 Category 的显示 </p>
+</li>
+<li>
+<p><strong> 找不到关于 Google 站内搜索的教程？</strong><br />
     原博客挂了。可以参考这里：<a href="http://blog.lanbing.org/2013.cgi">Pelican 添加自定义搜索 </a>。<br />
     或者看 <a href="https://github.com/lizherui/lizherui.github.io">lizherui 的文件 </a>（添加 <code>search.html</code> 放置搜索输出 , 修改相应的 template、css 和配置文件）。<br />
-    我的 theme 排版不同，暂时不添加这个。</li>
-<li><strong>FILES_TO_COPY 失效？</strong><br />
-    已经在新版本中弃用，采用了 EXTRA_PATH_METADATA</li>
-<li><strong>make html 还是 make publish？</strong><br />
-    翻了翻 Makefile。我这里它们是一样的，取决于你用的是 <code>pelicanconf.py</code> 还是 <code>publishconf.py</code>。甚至你可以自己定义一个文件作配置。岔开来说，能感觉到玩腻 <a href="http://docs.getpelican.com/en/latest/settings.html"> 配置 </a> 后，下一步就该玩 Makefile 了。</li>
-<li><strong> 为啥加载速度那么慢？</strong><br />
-    可以看看 chrome 的 f12 中 network 相关的加载速度（ctrl+f5 强制刷新刷）。一般来说，优先考虑主题中某些比如谷哥的服务被挡，或者是字体文件太大（因为本身 github 在国内的速度也不乐观）。前者更为制约。所以要么通过下载相应的文件并在主题里进行修改，要么通过国内的服务商提供的常用前端公共库。具体可以参考 <a href="http://www.loz4.com/pages/2014/08/pelican-speed-in-china"> 这篇日志 </a>。</li>
+    我的 theme 排版不同，暂时不添加这个。</p>
+</li>
+<li>
+<p><strong>FILES_TO_COPY 失效？</strong><br />
+    已经在新版本中弃用，采用了 EXTRA_PATH_METADATA</p>
+</li>
+<li>
+<p><strong>make html 还是 make publish？</strong><br />
+    翻了翻 Makefile。我这里它们是一样的，取决于你用的是 <code>pelicanconf.py</code> 还是 <code>publishconf.py</code>。甚至你可以自己定义一个文件作配置。岔开来说，能感觉到玩腻 <a href="http://docs.getpelican.com/en/latest/settings.html"> 配置 </a> 后，下一步就该玩 Makefile 了。</p>
+</li>
+<li>
+<p><strong> 为啥加载速度那么慢？</strong><br />
+    可以看看 chrome 的 f12 中 network 相关的加载速度（ctrl+f5 强制刷新刷）。一般来说，优先考虑主题中某些比如谷哥的服务被挡，或者是字体文件太大（因为本身 github 在国内的速度也不乐观）。前者更为制约。所以要么通过下载相应的文件并在主题里进行修改，要么通过国内的服务商提供的常用前端公共库。具体可以参考 <a href="http://www.loz4.com/pages/2014/08/pelican-speed-in-china"> 这篇日志 </a>。</p>
+</li>
 </ul>
             </div>
             <!-- /.entry-content -->
