@@ -67,7 +67,7 @@
 &lt;li&gt;&lt;a href="http://blog.skydark.info/programming/2012/03/23/play-with-jekyll/"&gt;Play with Jekyll&lt;/a&gt;, 有许多可借鉴的地方。&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://docs.getpelican.com/en/latest/"&gt;Pelican 官方文档 &lt;/a&gt;, 且要翻一阵子这个。。。&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.dongxf.com/3_Build_Personal_Blog_With_Pelican_And_GitHub_Pages.html"&gt; 用 Pelican 和 GitHub Pages 搭建免费的个人博客 &lt;/a&gt;，中文 Pelican 的一个不错的总结。但是我想说。。。博主你这么快就不更新了是要做反例么！！补一句，那个 theme 并不是 bootstrap3, 而是 &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs"&gt;tuxlite_tbs&lt;/a&gt;。配色赞的很，上面的 &lt;a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html"&gt; 一步一步打造 Geek 风格的技术博客 &lt;/a&gt; 用的也是这个。如果驾驭不了 bootstrap3 的话，我说不定也投奔它了 XD。&lt;/li&gt;
-&lt;li&gt; 如果熟悉英文，还可以参考 &lt;a href="http://arunrocks.com/moving-blogs-to-pelican/"&gt; 从 WP 到 Jekyll 到 Pelican 的感想 &lt;/a&gt;，&lt;a href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"&gt; 实践 &lt;/a&gt;，以及 &lt;a href="http://querbalken.net/howto-setup-comments-with-disqus-in-pelican-en.html"&gt;Disqus&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt; 如果熟悉英文，还可以参考 &lt;a href="http://arunrocks.com/moving-blogs-to-pelican/"&gt; 从 WP 到 Jekyll 到 Pelican 的感想 &lt;/a&gt;，&lt;a href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"&gt; 实践 &lt;/a&gt;，以及 &lt;a href="http://querbalken.net/howto-setup-comments-with-disqus-in-pelican-en.html"&gt;Disqus&lt;/a&gt; 或 &lt;a href="http://blog.chenjia.me/articles/141102-011500.html"&gt; 多说 &lt;/a&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt; 水有多深？&lt;/h3&gt;
 &lt;hr /&gt;
@@ -118,7 +118,11 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Disqus 无法成功加载？&lt;/strong&gt; &lt;br /&gt;
-    把配置文件中的 &lt;code&gt;SITEUR = “”&lt;/code&gt; 改成自己的地址。关闭 RELATIVE_URLS。&lt;/p&gt;
+    把配置文件中的 &lt;code&gt;SITEURL = “”&lt;/code&gt; 改成自己的地址。关闭 RELATIVE_URLS。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt; 多说怎么配置？** &lt;br /&gt;
+    参考一下 &lt;a href="http://blog.chenjia.me/articles/141102-011500.html"&gt; 这里 &lt;/a&gt;，我用的是 &lt;code&gt;{% if DUOSHUO_SITENAME and SITEURL and article and article.status != “draft” %}&lt;/code&gt; 保证生成的时候不报错，然后把 &lt;code&gt;document.getElementsByTagName(‘body’)&lt;/code&gt; 改成了 &lt;code&gt;document.getElementsByTagName(‘container’)&lt;/code&gt; 让留言框在我的主题下内嵌在左边栏而不是横跨。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt; 抬头 Menu 要 About，不要 Category？&lt;/strong&gt; &lt;br /&gt;

@@ -104,7 +104,7 @@
 <li><a href="http://blog.skydark.info/programming/2012/03/23/play-with-jekyll/">Play with Jekyll</a>, 有许多可借鉴的地方。</li>
 <li><a href="http://docs.getpelican.com/en/latest/">Pelican 官方文档 </a>, 且要翻一阵子这个。。。</li>
 <li><a href="http://www.dongxf.com/3_Build_Personal_Blog_With_Pelican_And_GitHub_Pages.html"> 用 Pelican 和 GitHub Pages 搭建免费的个人博客 </a>，中文 Pelican 的一个不错的总结。但是我想说。。。博主你这么快就不更新了是要做反例么！！补一句，那个 theme 并不是 bootstrap3, 而是 <a href="https://github.com/getpelican/pelican-themes/tree/master/tuxlite_tbs">tuxlite_tbs</a>。配色赞的很，上面的 <a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html"> 一步一步打造 Geek 风格的技术博客 </a> 用的也是这个。如果驾驭不了 bootstrap3 的话，我说不定也投奔它了 XD。</li>
-<li> 如果熟悉英文，还可以参考 <a href="http://arunrocks.com/moving-blogs-to-pelican/"> 从 WP 到 Jekyll 到 Pelican 的感想 </a>，<a href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"> 实践 </a>，以及 <a href="http://querbalken.net/howto-setup-comments-with-disqus-in-pelican-en.html">Disqus</a>。</li>
+<li> 如果熟悉英文，还可以参考 <a href="http://arunrocks.com/moving-blogs-to-pelican/"> 从 WP 到 Jekyll 到 Pelican 的感想 </a>，<a href="http://terriyu.info/blog/posts/2013/07/pelican-setup/"> 实践 </a>，以及 <a href="http://querbalken.net/howto-setup-comments-with-disqus-in-pelican-en.html">Disqus</a> 或 <a href="http://blog.chenjia.me/articles/141102-011500.html"> 多说 </a>。</li>
 </ol>
 <h3> 水有多深？</h3>
 <hr />
@@ -155,7 +155,11 @@
 </li>
 <li>
 <p><strong>Disqus 无法成功加载？</strong> <br />
-    把配置文件中的 <code>SITEUR = “”</code> 改成自己的地址。关闭 RELATIVE_URLS。</p>
+    把配置文件中的 <code>SITEURL = “”</code> 改成自己的地址。关闭 RELATIVE_URLS。</p>
+</li>
+<li>
+<p> 多说怎么配置？** <br />
+    参考一下 <a href="http://blog.chenjia.me/articles/141102-011500.html"> 这里 </a>，我用的是 <code>{% if DUOSHUO_SITENAME and SITEURL and article and article.status != “draft” %}</code> 保证生成的时候不报错，然后把 <code>document.getElementsByTagName(‘body’)</code> 改成了 <code>document.getElementsByTagName(‘container’)</code> 让留言框在我的主题下内嵌在左边栏而不是横跨。</p>
 </li>
 <li>
 <p><strong> 抬头 Menu 要 About，不要 Category？</strong> <br />
