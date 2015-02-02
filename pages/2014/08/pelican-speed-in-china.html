@@ -167,12 +167,10 @@
  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
  ds.charset = 'UTF-8';
  (document.getElementsByTagName('head')[0] 
-  || document.getElementsByTagName('body')[0]).appendChild(ds);
+  || document.getElementsByTagName('container')[0]).appendChild(ds);
  })();
 </script>
 <!-- 多说公共JS代码 end -->
-
-})
         </div>
         <div class="col-sm-3 well well-sm" id="sidebar">
 
