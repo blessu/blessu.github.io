@@ -158,8 +158,8 @@
     把配置文件中的 <code>SITEURL = “”</code> 改成自己的地址。关闭 RELATIVE_URLS。</p>
 </li>
 <li>
-<p> 多说怎么配置？** <br />
-    参考一下 <a href="http://blog.chenjia.me/articles/141102-011500.html"> 这里 </a>，我用的是 <code>{% if DUOSHUO_SITENAME and SITEURL and article and article.status != “draft” %}</code> 保证生成的时候不报错，然后把 <code>document.getElementsByTagName(‘body’)</code> 改成了 <code>document.getElementsByTagName(‘container’)</code> 让留言框在我的主题下内嵌在左边栏而不是横跨。</p>
+<p><strong> 多说怎么配置？</strong>** <br />
+    参考一下 <a href="http://blog.chenjia.me/articles/141102-011500.html"> 这里 </a>。最好和 Disqus 类似，给那一大段加上限制条件 <code>{% if DUOSHUO_SITENAME and SITEURL and article and article.status != “draft” %}</code> 防止生成时报错，然后把 <code>document.getElementsByTagName(‘body’)</code> 中的 body 改成 container，让留言框在某些主题下内嵌在左边栏而不是横跨。</p>
 </li>
 <li>
 <p><strong> 抬头 Menu 要 About，不要 Category？</strong> <br />

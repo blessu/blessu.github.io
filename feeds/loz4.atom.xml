@@ -121,8 +121,8 @@
     把配置文件中的 &lt;code&gt;SITEURL = “”&lt;/code&gt; 改成自己的地址。关闭 RELATIVE_URLS。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt; 多说怎么配置？** &lt;br /&gt;
-    参考一下 &lt;a href="http://blog.chenjia.me/articles/141102-011500.html"&gt; 这里 &lt;/a&gt;，我用的是 &lt;code&gt;{% if DUOSHUO_SITENAME and SITEURL and article and article.status != “draft” %}&lt;/code&gt; 保证生成的时候不报错，然后把 &lt;code&gt;document.getElementsByTagName(‘body’)&lt;/code&gt; 改成了 &lt;code&gt;document.getElementsByTagName(‘container’)&lt;/code&gt; 让留言框在我的主题下内嵌在左边栏而不是横跨。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 多说怎么配置？&lt;/strong&gt;** &lt;br /&gt;
+    参考一下 &lt;a href="http://blog.chenjia.me/articles/141102-011500.html"&gt; 这里 &lt;/a&gt;。最好和 Disqus 类似，给那一大段加上限制条件 &lt;code&gt;{% if DUOSHUO_SITENAME and SITEURL and article and article.status != “draft” %}&lt;/code&gt; 防止生成时报错，然后把 &lt;code&gt;document.getElementsByTagName(‘body’)&lt;/code&gt; 中的 body 改成 container，让留言框在某些主题下内嵌在左边栏而不是横跨。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt; 抬头 Menu 要 About，不要 Category？&lt;/strong&gt; &lt;br /&gt;
